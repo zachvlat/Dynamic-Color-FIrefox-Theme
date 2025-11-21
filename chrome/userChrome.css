@@ -47,7 +47,7 @@
 /* Tab padding for cleaner spacing */
 .tabbrowser-tab {
     padding: 2px 2px !important;
-    margin: 2px 2px !important;
+    margin: 0px 0px !important;
 }
 
 /* Background of tabs */
@@ -203,3 +203,4 @@ menupopup {
 #bookmarksPanel {
     border-radius: var(--cosmic-radius) !important;
 }
+
