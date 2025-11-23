@@ -21,3 +21,8 @@ Edit the color variables in the `:root` section of `userChrome.css`:
   --canvas-text: CanvasText;
   --canvas: Canvas;
 }
+```
+## Examples
+<img width="1280" height="720" alt="Screenshot_20251123_151148" src="https://github.com/user-attachments/assets/b4eac07d-6a4a-4928-9581-b1f907e166c8" />
+<img width="1280" height="720" alt="Screenshot_20251123_151047" src="https://github.com/user-attachments/assets/84303db0-7e60-4aeb-8d4c-20589a4a1b6f" />
+<img width="1280" height="720" alt="Screenshot_20251123_150944" src="https://github.com/user-attachments/assets/c4c008e9-b1dd-4583-b936-cdf14e81f47f" />
