@@ -10,18 +10,6 @@ A minimal Firefox theme that dynamically colors the interface using CSS custom p
 4. Save `userChrome.css` in the chrome folder
 5. Restart Firefox
 
-## Customization
-
-Edit the color variables in the `:root` section of `userChrome.css`:
-
-```css
-:root {
-  --accent-color: AccentColor;
-  --accent-mixed: color-mix(in srgb, AccentColor 20%, black);
-  --canvas-text: CanvasText;
-  --canvas: Canvas;
-}
-```
 ## Examples
 <img width="1280" height="720" alt="Screenshot_20251123_151148" src="https://github.com/user-attachments/assets/b4eac07d-6a4a-4928-9581-b1f907e166c8" />
 <img width="1280" height="720" alt="Screenshot_20251123_151047" src="https://github.com/user-attachments/assets/84303db0-7e60-4aeb-8d4c-20589a4a1b6f" />
