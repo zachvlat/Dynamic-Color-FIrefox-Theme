@@ -1,6 +1,6 @@
 :root {
     --accent-color: AccentColor;
-    --accent-mixed: color-mix(in srgb, AccentColor 20%, black);
+    --accent-mixed: color-mix(in srgb, AccentColor 35%, black);
     --canvas-text: CanvasText;
     --canvas: Canvas;
 }
@@ -68,3 +68,4 @@ menu, menuitem {
 menu:hover, menuitem:hover {
     background-color: var(--accent-mixed) !important;
 }
+
