@@ -1,195 +1,70 @@
-/* ===========================================
-   COSMIC VARIABLES
-=========================================== */
-
 :root {
-    --cosmic-radius: 22px;
-    --cosmic-accent: AccentColor;
-
-    --cosmic-bg: color-mix(in srgb, AccentColor 20%, black);
-    --cosmic-bg-dark: CanvasText;
-    --cosmic-bg-light: Canvas;
-
-    /* Slightly darker version for focused tab */
-    --cosmic-tab-selected: color-mix(in srgb, var(--cosmic-bg) 80%, black);
-
-    --cosmic-border: AccentColor;
-
-    --cosmic-text: CanvasText;
-    --cosmic-text-dim: AccentColor;
+    --accent-color: AccentColor;
+    --accent-mixed: color-mix(in srgb, AccentColor 20%, black);
+    --canvas-text: CanvasText;
+    --canvas: Canvas;
 }
 
-/* ===========================================
-   TAB BAR, GENERAL SURFACES
-=========================================== */
-
-#navigator-toolbox,
-#TabsToolbar,
+/* Apply the theme colors */
 #nav-bar {
-    background: var(--cosmic-bg) !important;
-    color: var(--cosmic-text) !important;
-    border: none !important;
-    box-shadow: none !important;
+background-color: var(--accent-mixed) !important;
+color: var(--canvas-text) !important;
 }
 
-/* Remove default separators */
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-    border: none !important;
+#TabsToolbar {
+background-color: var(--accent-mixed) !important;
 }
 
-/* ===========================================
-   TABS (FULL REWRITE)
-=========================================== */
-
-/* Base tab container */
-.tabbrowser-tab {
-    padding: 2px 2px !important;
-    margin: 0 !important;
-    color: var(--cosmic-text-dim) !important;
+.tab-background[selected] {
+    background-color: var(--accent-color) !important;
+    color: var(--canvas-text) !important;
 }
 
-/* Base background for all tab surfaces */
-.tab-background {
-    background: var(--cosmic-bg) !important;
-    border-radius: var(--cosmic-radius) !important;
-    border: 1px solid var(--cosmic-border) !important;
+.tab-background:not([selected]) {
+    background-color: var(--accent-mixed) !important;
 }
 
-/* -------------------------------------------------------
-   FOCUSED TAB
-   → Same style as unfocused but slightly darker
-------------------------------------------------------- */
-.tabbrowser-tab[selected="true"] .tab-background {
-    background: var(--cosmic-tab-selected) !important;
-    border-color: var(--cosmic-border) !important;
+.tab-line[selected] {
+    background-color: var(--accent-color) !important;
 }
 
-.tabbrowser-tab[selected="true"] {
-    color: var(--cosmic-text) !important;
+.browser-container {
+    background-color: var(--canvas) !important;
+    color: var(--canvas-text) !important;
 }
 
-/* -------------------------------------------------------
-   HOVER TAB
-   → Mild brighten using color-mix,
-     but still consistent with COSMIC surfaces
-------------------------------------------------------- */
-
-.tabbrowser-tab:not([selected="true"]):hover .tab-background {
-    background: color-mix(in srgb, var(--cosmic-bg) 70%, white) !important;
+#urlbar-background {
+background-color: var(--canvas) !important;
+color: var(--canvas-text) !important;
 }
 
-/* ===========================================
-   URL BAR & SEARCH BAR (unchanged except formatting)
-=========================================== */
-
-#urlbar-background,
-#searchbar {
-    border-radius: var(--cosmic-radius) !important;
-    background-color: var(--cosmic-bg-light) !important;
-    border: 1px solid var(--cosmic-border) !important;
+#urlbar-input {
+color: var(--canvas-text) !important;
 }
 
-#urlbar-container {
-    margin-inline: 6px !important;
+#sidebar-box {
+background-color: var(--canvas) !important;
+color: var(--canvas-text) !important;
 }
 
-#urlbar-input-container {
-    border-radius: var(--cosmic-radius) !important;
-    background: transparent !important;
+#sidebar-search-container {
+background-color: var(--accent-mixed) !important;
 }
 
-#urlbar[focused="true"] #urlbar-background,
-#urlbar[focused="true"] {
-    border-color: var(--cosmic-accent) !important;
-    background-color: var(--cosmic-bg-light) !important;
-    border-radius: var(--cosmic-radius) !important;
-}
-
-.urlbarView {
-    border-radius: var(--cosmic-radius) !important;
-    margin-top: 4px !important;
-    border: 1px solid var(--cosmic-border) !important;
-}
-
-/* ===========================================
-   Bookmark Bar
-=========================================== */
-
-#PersonalToolbar {
-    background: var(--cosmic-bg) !important;
-    color: var(--cosmic-text) !important;
-    border: none !important;
-    border-top: 1px solid var(--cosmic-border) !important;
-    padding: 4px 0 !important;
-}
-
-#PersonalToolbar .toolbarbutton-1 {
-    color: var(--cosmic-text) !important;
-    border-radius: var(--cosmic-radius) !important;
-    padding: 4px 8px !important;
-    margin: 0 2px !important;
-}
-
-#PersonalToolbar .toolbarbutton-1:hover {
-    background-color: var(--cosmic-bg-light) !important;
-    color: var(--cosmic-text) !important;
-}
-
-#PlacesToolbarItems menupopup {
-    background: var(--cosmic-bg) !important;
-    border: 1px solid var(--cosmic-border) !important;
-    border-radius: var(--cosmic-radius) !important;
-}
-
-/* ===========================================
-   Toolbar Buttons
-=========================================== */
-
-.toolbarbutton-1 {
-    border-radius: var(--cosmic-radius) !important;
-    padding: 6px !important;
-}
-
-.toolbarbutton-1:hover {
-    background-color: var(--cosmic-bg-light) !important;
-}
-
-.toolbarbutton-1[open] {
-    background-color: color-mix(in srgb, var(--cosmic-accent) 30%, transparent) !important;
-}
-
-/* ===========================================
-   Menus, Panels, Popups
-=========================================== */
-
-panelview,
-panelmultiview,
-panel,
-menupopup {
-    background: var(--cosmic-bg) !important;
-    color: var(--cosmic-text) !important;
-    border: 1px solid var(--cosmic-border) !important;
-    border-radius: var(--cosmic-radius) !important;
+toolbar {
+    background-color: var(--accent-mixed) !important;
+    color: var(--canvas-text) !important;
 }
 
 menupopup {
-    -moz-appearance: none !important;
+    background-color: var(--canvas) !important;
+    color: var(--canvas-text) !important;
 }
 
-/* ===========================================
-   Misc / Optional
-=========================================== */
-
-#titlebar {
-    appearance: none !important;
+menu, menuitem {
+    color: var(--canvas-text) !important;
 }
 
-#downloadsPanel {
-    border-radius: var(--cosmic-radius) !important;
-}
-
-#libraryWindow,
-#bookmarksPanel {
-    border-radius: var(--cosmic-radius) !important;
+menu:hover, menuitem:hover {
+    background-color: var(--accent-mixed) !important;
 }
