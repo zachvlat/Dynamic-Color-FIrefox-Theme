@@ -1,77 +1,121 @@
+/* =======================================================
+   Root Variables
+   ======================================================= */
 :root {
     --accent-color: AccentColor;
     --accent-mixed: color-mix(in srgb, AccentColor 35%, black);
     --canvas-text: CanvasText;
     --canvas: Canvas;
-	--radius: 22px;
+    --radius: 22px;
 }
 
-/* Apply the theme colors */
+/* =======================================================
+   Navigation Bar
+   ======================================================= */
 #nav-bar {
-background-color: var(--accent-mixed) !important;
-color: var(--canvas-text) !important;
+    background-color: var(--accent-mixed) !important;
+    color: var(--canvas-text) !important;
 }
 
+/* =======================================================
+   Tabs Toolbar
+   ======================================================= */
 #TabsToolbar {
-background-color: var(--accent-mixed) !important;
+    background-color: var(--accent-mixed) !important;
 }
 
+/* --- Individual Tabs --- */
+.tabbrowser-tab {
+    border-radius: var(--radius) !important;
+    overflow: hidden !important;
+}
+
+/* --- Tab Backgrounds --- */
 .tab-background[selected] {
     background-color: var(--accent-color) !important;
     color: var(--canvas-text) !important;
-	border-radius: var(--radius) !important;
+    border-radius: var(--radius) !important;
 }
 
 .tab-background:not([selected]) {
     background-color: var(--accent-mixed) !important;
 }
 
-.tabbrowser-tab {
-    border-radius: var(--radius) !important;
-    overflow: hidden !important;
-}
-
+/* --- Selected Tab Line --- */
 .tab-line[selected] {
     background-color: var(--accent-color) !important;
 }
 
+/* =======================================================
+   URL Bar
+   ======================================================= */
+#urlbar-background {
+    background-color: var(--canvas) !important;
+    color: var(--canvas-text) !important;
+}
+
+#urlbar-input {
+    color: var(--canvas-text) !important;
+}
+
+#urlbar,
+#urlbar-container {
+    border-radius: var(--radius) !important;
+    overflow: hidden !important;
+    flex-grow: 1 !important;
+}
+
+#urlbar-background {
+    border-radius: var(--radius) !important;
+    overflow: hidden !important;
+}
+
+toolbarspring {
+    display: none !important;
+}
+
+/* =======================================================
+   Browser Content Area
+   ======================================================= */
 .browser-container {
     background-color: var(--canvas) !important;
     color: var(--canvas-text) !important;
 }
 
-#urlbar-background {
-background-color: var(--canvas) !important;
-color: var(--canvas-text) !important;
-}
-
-#urlbar-input {
-color: var(--canvas-text) !important;
-}
-
+/* =======================================================
+   Sidebar
+   ======================================================= */
 #sidebar-box {
-background-color: var(--canvas) !important;
-color: var(--canvas-text) !important;
+    background-color: var(--canvas) !important;
+    color: var(--canvas-text) !important;
 }
 
 #sidebar-search-container {
-background-color: var(--accent-mixed) !important;
+    background-color: var(--accent-mixed) !important;
 }
 
+/* =======================================================
+   Toolbar Elements
+   ======================================================= */
 toolbar {
     background-color: var(--accent-mixed) !important;
     color: var(--canvas-text) !important;
 }
 
+/* =======================================================
+   Menus
+   ======================================================= */
 menupopup {
     background-color: var(--canvas) !important;
     color: var(--canvas-text) !important;
 }
 
-menu, menuitem {
+menu,
+menuitem {
     color: var(--canvas-text) !important;
 }
 
-menu:hover, menuitem:hover {
+menu:hover,
+menuitem:hover {
     background-color: var(--accent-mixed) !important;
 }
