@@ -1,6 +1,6 @@
 # Dynamic Color Firefox Theme
 
-A minimal Firefox theme that dynamically colors the interface using CSS custom properties while maintaining the browser's default layout and behavior.
+A minimal Firefox theme (heavily inspired by Material You theming) that dynamically colors the interface using CSS custom properties while maintaining the browser's default layout and behavior.
 
 ## Installation
 
@@ -11,6 +11,11 @@ A minimal Firefox theme that dynamically colors the interface using CSS custom p
 5. Restart Firefox
 
 ## Examples
-<img width="1280" height="720" alt="Screenshot_20251123_151148" src="https://github.com/user-attachments/assets/b4eac07d-6a4a-4928-9581-b1f907e166c8" />
-<img width="1280" height="720" alt="Screenshot_20251123_151047" src="https://github.com/user-attachments/assets/84303db0-7e60-4aeb-8d4c-20589a4a1b6f" />
-<img width="1280" height="720" alt="Screenshot_20251123_150944" src="https://github.com/user-attachments/assets/c4c008e9-b1dd-4583-b936-cdf14e81f47f" />
+
+<img width="1280" height="720" alt="2025-11-25_14-09" src="https://github.com/user-attachments/assets/087d70a3-574d-41b0-8adb-fb5ce38ab03e" />
+<img width="1280" height="720" alt="2025-11-25_14-10" src="https://github.com/user-attachments/assets/d50044ff-cfcd-430c-bb90-ac1cff798d79" />
+<img width="1280" height="720" alt="2025-11-25_14-10_1" src="https://github.com/user-attachments/assets/241581fc-3b82-45fa-bb3d-34528b523655" />
+
+## Thanks
+
+Special thanks to MrOtherGuy's [Firefox CSS Hacks](https://github.com/MrOtherGuy/firefox-csshacks/) which is a great material for creating themes on Firefox.
