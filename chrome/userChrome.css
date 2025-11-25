@@ -3,7 +3,8 @@
    ======================================================= */
 :root {
     --accent-color: AccentColor;
-    --accent-mixed: color-mix(in srgb, AccentColor 35%, black);
+    --accent-mixed: color-mix(in srgb, AccentColor 30%, black);
+    --accent-mixed-light: color-mix(in srgb, AccentColor 60%, white);
     --canvas-text: CanvasText;
     --canvas: Canvas;
     --radius: 22px;
@@ -70,6 +71,35 @@
     overflow: hidden !important;
 }
 
+toolbarspring {
+    display: none !important;
+}
+
+#main-window:not([privatebrowsingmode]) :is(#urlbar-search-mode-indicator,#urlbar-background,#searchbar) {
+  background-color: var(--accent-mixed-light) !important;
+}
+
+:root[lwtheme]:not([privatebrowsingmode]) #searchbar,
+:root[lwtheme]:not([privatebrowsingmode]) #urlbar :is(#urlbar-input,#urlbar-scheme,#page-action-buttons,#identity-icon-box,#urlbar-input-container,.urlbar-input-container,#urlbar-background,.urlbarView),
+:root[lwtheme]:not(:-moz-lwtheme-brighttext):not([privatebrowsingmode]) #urlbar .urlbarView-row:not([type=tip], [type=dynamic])[selected] > .urlbarView-row-inner,
+:root[lwtheme]:not(:-moz-lwtheme-brighttext):not([privatebrowsingmode]) #urlbar .urlbarView-row-inner[selected] {
+  color: var(--accent-mixed-light) !important;
+  fill: var(--accent-mixed-light) !important;
+}
+
+@media (-moz-content-prefers-color-scheme: light), (prefers-color-scheme: light),
+        (-moz-toolbar-prefers-color-scheme: dark), (prefers-color-scheme: dark) {
+    :root[lwtheme]:not([privatebrowsingmode]) #urlbar .urlbarView-row:not([type=tip], [type=dynamic])[selected] > .urlbarView-row-inner,
+    :root[lwtheme]:not([privatebrowsingmode]) #urlbar .urlbarView-row-inner[selected] {
+      color: var(--accent-mixed-light) !important;
+      fill: var(--accent-mixed-light) !important;
+    }
+    #main-window:not([privatebrowsingmode]) :is(#urlbar,#urlbar-search-mode-indicator,#urlbar-background,#searchbar) {
+      color: var(--accent-mixed-light) !important;
+      fill: var(--accent-mixed-light) !important;
+    }
+}
+
 /* =======================================================
    Browser Content Area
    ======================================================= */
@@ -98,25 +128,82 @@ toolbar {
     color: var(--canvas-text) !important;
 }
 
-toolbarspring {
-    display: none !important;
-}
-
 /* =======================================================
    Menus
    ======================================================= */
-menupopup {
+menupopup,
+panel,
+.menupopup-arrowscrollbox {
+    -moz-appearance: none !important;
     background-color: var(--canvas) !important;
     color: var(--canvas-text) !important;
+    border: 1px solid var(--accent-mixed) !important;
 }
 
 menu,
 menuitem {
+    -moz-appearance: none !important;
+    background-color: transparent !important;
     color: var(--canvas-text) !important;
+    padding: 6px 10px !important;
 }
 
 menu:hover,
 menuitem:hover {
     background-color: var(--accent-mixed) !important;
+    color: var(--canvas-text) !important;
 }
 
+/* =======================================================
+   Downloads Menu
+   ======================================================= */
+/* This removes the line above "Show All Downloads" */ 
+.panel-footer > xul|button {
+  color: var(--accent-color) !important;
+}
+
+/* Changes the color of the area around "Show All Downloads" and changes the "Show All Downloads" text color */
+.panel-footer {
+  background-color: var(--canvas) !important;
+  font-weight: bold !important;
+  color: var(--accent-color) !important;
+}
+
+:root {
+  --arrowpanel-background: var(--canvas) !important;
+  --arrowpanel-color: var(--accent-color) !important;
+  --arrowpanel-dimmed: none !important;
+  --arrowpanel-field-background: var(--canvas) !important;
+  --panel-separator-color: var(--accent-color) !important;
+  --toolbarbutton-icon-fill-attention: var(--accent-color) !important; 
+}
+
+/* =======================================================
+   Hamburger and Other Menus
+   ======================================================= */
+.PanelUI-subView, .panel-subview-body {
+    --newtab-search-icon-color: var(--accent-color);
+    --arrowpanel-background: none !important;
+    --arrowpanel-color: var(--accent-color) !important;
+    --lwt-accent-color: var(--accent-color) !important;
+    --lwt-text-color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    background-color: var(--canvas) !important;
+}
+
+.PanelUI-remotetabs-clientcontainer > label[itemtype="client"] {
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+}
+
+/* =======================================================
+   Account Settings
+   ======================================================= */
+#fxa-menu-header-description {
+  color: var(--accent-color) !important;
+}
+
+#fxa-menu-header-title {
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+}
