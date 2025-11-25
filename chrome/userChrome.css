@@ -70,10 +70,6 @@
     overflow: hidden !important;
 }
 
-toolbarspring {
-    display: none !important;
-}
-
 /* =======================================================
    Browser Content Area
    ======================================================= */
@@ -102,6 +98,10 @@ toolbar {
     color: var(--canvas-text) !important;
 }
 
+toolbarspring {
+    display: none !important;
+}
+
 /* =======================================================
    Menus
    ======================================================= */
@@ -119,3 +119,4 @@ menu:hover,
 menuitem:hover {
     background-color: var(--accent-mixed) !important;
 }
+
